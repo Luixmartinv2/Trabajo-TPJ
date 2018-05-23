@@ -113,7 +113,7 @@ eclipse {
 // sets up the Android Idea project, using the old Ant based build.
 idea {
     module {
-        sourceDirs += file("src" );scopes =[ COMPILE: [plus: [project.configurations.compile]]]        
+        sourceDirs += file( "src" );scopes =[ COMPILE: [plus: [project.configurations.compile]]]        
 
         iml {
             withXml {
@@ -122,8 +122,7 @@ idea {
                 builder.current = node;
                 builder.component(name: "FacetManager") {
                     facet(type: "android", name: "Android") {
-                        configuration {
-                            option(name:"UPDATE_PROPERTY_FILES" , value:"true")
+                            configuration { option(name: "UPDATE_PROPERTY_FILES" , value:"true")
                         }
                     }
                 }
@@ -134,11 +133,10 @@ idea {
 
 // Comento estas dependencias, porque sino no me deja crear nuevas clases, y ademas da error.
 
- //   dependencies {
- // implementation
-  //  'com.android.support:appcompat-v7:27.+'
-  //implementation 'com.android.support.constraint:constraint-layout:+'
+//   dependencies {
+
+// implementation
+//  'com.android.support:appcompat-v7:27.+'
+//implementation 'com.android.support.constraint:constraint-layout:+'
 //}
-dependencies {
-  implementation 'com.android.support.constraint:constraint-layout:+'
-}
+
