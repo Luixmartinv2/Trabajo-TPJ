@@ -25,3 +25,14 @@ compile 'com.google.firebase:firebase-core:16.0.0'
 
 y agregamos al final:
 apply plugin: 'com.google.gms.google-services'
+
+Commit 6
+
+Error en el gradle:
+
+Gradle sync failed: Could not find method classpath() for arguments [com.google.gms:google-services:3.3.1] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler.
+			Consult IDE log for more details (Help | Show Log) (801ms)
+
+//MENSAJE MOSTRADO:
+
+25/5/18 10:38:34,000 kernel[0]: Google Chrome He[1841] triggered unnest of range 0x7fff95400000->0x7fff95600000 of DYLD shared region in VM map 0x2691a9279b574981. While not abnormal for debuggers, this increases system memory footprint until the target exits.
