@@ -6,17 +6,28 @@ buildscript {
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-        
+        //lo modificamos para que se ponga en una version mas actual.
+        //classpath 'com.android.tools.build:gradle:3.0.1'
+        /*
+        *   provamos a agregar no funciona
+        *   classpath 'com.google.gms:google-services:3.2.0'
+        */
 
+        //classpath 'com.google.gms:google-services:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.google.gms:google-services:3.2.0' // google-services plugin
     }
+
 }
 
 allprojects {
     apply plugin: "eclipse"
     apply plugin: "idea"
+
+    //apply plugin: 'com.google.gms.google-services'
 
     version = '1.0'
     ext {
@@ -36,11 +47,15 @@ allprojects {
         //sacado de la documentacion de firebase
         maven { url "https://maven.google.com" // Google's Maven repository
         }
+        google()
     }
+
 }
 
 project(":android") {
     apply plugin: "android"
+    apply plugin: 'com.google.gms.google-services'
+
 
     configurations { natives }
 
@@ -75,8 +90,14 @@ project(":android") {
         compile "com.badlogicgames.gdx:gdx-ai:$aiVersion"
         compile "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-controllers-android:$gdxVersion"
-        
+
+        compile 'com.google.firebase:firebase-core:16.0.0'
+
+
     }
+
+
+
 }
 
 project(":core") {
@@ -92,7 +113,7 @@ project(":core") {
         compile "com.badlogicgames.ashley:ashley:$ashleyVersion"
         compile "com.badlogicgames.gdx:gdx-ai:$aiVersion"
         compile "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
-        classpath 'com.google.gms:google-services:3.3.1'
+
     }
 }
 
