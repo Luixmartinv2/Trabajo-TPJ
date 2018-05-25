@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "742206625855",
+    "firebase_url": "https://dintact4.firebaseio.com",
+    "project_id": "dintact4",
+    "storage_bucket": "dintact4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742206625855:android:37f509b9ecdbc3ea",
+        "android_client_info": {
+          "package_name": "com.example.luixmartinv2.dintact4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742206625855-119bvvrkkme0urettnbel4pshpnl8f5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXEc0Xz4D8OUzvLrsTAvrR4ks5qXeipSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

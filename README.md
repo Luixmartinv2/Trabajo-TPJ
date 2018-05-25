@@ -36,3 +36,12 @@ Gradle sync failed: Could not find method classpath() for arguments [com.google.
 //MENSAJE MOSTRADO:
 
 25/5/18 10:38:34,000 kernel[0]: Google Chrome He[1841] triggered unnest of range 0x7fff95400000->0x7fff95600000 of DYLD shared region in VM map 0x2691a9279b574981. While not abnormal for debuggers, this increases system memory footprint until the target exits.
+
+Commit 7
+
+Probamos a consultar la documentacion de firebase, la cual parece bastante desactualizada.
+Realizamos un par de cambios recomendados y probamos a incorporar el plugin: google-services.json
+en el core y el proyecto general con el fin de comprobar si consigue encontrarlo en alguno de los dos casos,
+sin exito.
+En todos los casos se ha probado modificando el classpath por compile e implements por si se encontraba ahi el fallo,
+nuevamente sin exito.

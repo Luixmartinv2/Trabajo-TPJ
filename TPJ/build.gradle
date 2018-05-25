@@ -33,6 +33,9 @@ allprojects {
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+        //sacado de la documentacion de firebase
+        maven { url "https://maven.google.com" // Google's Maven repository
+        }
     }
 }
 
